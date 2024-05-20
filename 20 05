@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+
+int main() {
+    pid_t pid = getpid();
+    pid_t ppid = getppid();
+
+    printf("Process ID (PID): %d\n", pid);
+    printf("Parent Process ID (PPID): %d\n", ppid);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+
+int myglobalint1 = 500;
+int myglobalint2;
+
+int main() {
+    static int mystaticint1;
+    static int mystaticint2 = 100;
+    
+    printf("Hello World\n");
+    return 0;
+}
